@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title></title>
+    <link rel="stylesheet" href="/styles/dashboard.css"> 
+</head>
+<body>
+    <div class="container">
+        <%- include('../partials/sidebar') %>
+        <section>
+            <%- include('../partials/header') %>
+            <div class="overview">
+                <h2>Overview</h2>
+                <div class="categories">
+                    <div class="category">
+                        <span class="box">
+                            <i class="fa-solid fa-user icon"></i>
+                            <p>Utilitateurs</p>
+                            <span class="counter-icon"><%= NofUsers %></span>
+                        </span>
+                    </div>
+                    <div class="category">
+                        <span class="box">
+                            <i class="fa-solid fa-school-flag icon"></i>
+                            <p>Filières</p>
+                            <span class="counter-icon"><%= NofSectors %></span>
+                        </span>
+                    </div>
+                    <div class="category">
+                        <span class="box">
+                            <i class="fa-solid fa-graduation-cap icon"></i>
+                            <p>Étudiantes</p>
+                            <span class="counter-icon"><%= NofStudents %></span>
+                        </span>
+                    </div>
+                    <div class="category">
+                        <span class="box">
+                            <i class="fa-solid fa-graduation-cap icon"></i>
+                            <p>Absences</p>
+                            <span class="counter-icon">102</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-users">
+                <h2>Latest Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Rôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                        </tr>
+                        <tr>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                        </tr>
+                        <tr>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                            <td>tttttttttttttttt</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
