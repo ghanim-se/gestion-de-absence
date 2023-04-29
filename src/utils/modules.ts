@@ -2,16 +2,14 @@ import { getSectorById } from "../services/sectorServ";
 import { getSemesterById } from "../services/semesterServ";
 
 
-export const getPerfectModule = async (module: any) => {
+export const getModuleUtil = async (module: any) => {
     const perfectModule = {...module}
 
     perfectModule.semesters = await Promise.all(
-                            module.semesters.map(async (semester: any) => 
-                                await getSemesterById(semester.semesterId))) 
+                            module.semesters.map((semester: any) => getSemesterById(semester.semesterId))) 
     perfectModule.sectors = await Promise.all(
-                        module.sectors.map(async (sector: any) => 
-                                await getSectorById(sector.sectorId)))
-    
+                        module.sectors.map((sector: any) =>  getSectorById(sector.sectorId)))
+
     return perfectModule
 }
 

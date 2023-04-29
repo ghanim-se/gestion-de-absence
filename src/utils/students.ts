@@ -1,7 +1,7 @@
 import { getSectorById } from "../services/sectorServ"
 import { getSemesterById } from "../services/semesterServ"
 
-export const getPerfectStudent = async (student: any) => {
+export const getStudentUtil = async (student: any) => {
     const perfectStudent = {...student}
     
     perfectStudent.semesterId = await getSemesterById(perfectStudent.semesterId) 

@@ -1,5 +1,6 @@
 import { PrismaClient, Student } from "@prisma/client"
 import { StudentWithoutId } from "../utils/types"
+import exp from "constants"
 
 
 const prisma = new PrismaClient()
@@ -34,3 +35,16 @@ export const deleteStudentById = async (id: number) => {
     })
 }
 
+export const getStudentsBySemesterAndSector = async (semesterId: number, sectorId: number) => {
+    const students = await prisma.student.findMany({
+        where: {semesterId, sectorId}
+    })
+    return students
+}
+
+export const getStudentsByAbsenceId = async (absenceId: number) => {
+    const students = await prisma.absence_Student.findMany({
+        where: {absenceId}
+    })
+    return students
+}

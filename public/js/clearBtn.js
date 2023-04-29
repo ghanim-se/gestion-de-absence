@@ -1,7 +1,7 @@
-const inputArray = u('.inpt').nodes
+const inputArray = $('.inpt')
 
-u('.clearBtn').on('click', () => {
-    inputArray.forEach(element => {
-        element.value = ''
-    });
+$('.clearBtn').click(() => {
+    inputArray.each(function() {
+        this.value = ''
+    })
 })
